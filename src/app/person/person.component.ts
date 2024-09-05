@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Person } from '../Person';
 
 @Component({
   selector: 'app-person',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './person.component.css'
 })
 export class PersonComponent {
+  per:Person;
+  constructor(){
+    this.per=new Person(1,"Rabiya",12);
+  }
 
 }

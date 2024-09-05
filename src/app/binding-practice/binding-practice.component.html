@@ -1,0 +1,41 @@
+ <h1>String interpolation - One way</h1>
+
+itemImageUrl: {{itemImageUrl}} <br>
+
+itemImageUrl: {{itemImageUrl | uppercase}} <br>
+
+testclass: {{testClasses}} <br>
+testclass: {{applyTestClass}} <br>
+testclass: {{applyRedStyle}} <br>
+
+ <!-- getColor(): {{getColor()}} <br>  -->
+ testObj without Pipe: {{testObj}}<br>
+
+testObj with Json Pipe {{testObj | json}} <br> 
+<!-- Safe Navigation Operator: {{testObj?.Name}} -->
+
+<hr>
+<h1>Property Binding Example with []</h1>
+<a href="https://angular.io/guide/template-syntax#property-binding">For Docs</a>
+
+<h3>Square brackets or bind- syntax to bind with a property</h3>
+<img [src]="itemImageUrl" width="400px" height="100px"> <br>
+<img bind-src="itemImageUrl" width="400px" height="100px"> <br>
+
+<h3>Omitting square brackets make right side as "string"=> no evaulation</h3>
+<img src="itemImageUrl" width="400px" height="100px"> <br>
+<img src="{{itemImageUrl}}" width="400px" height="100px">
+<!-- 
+<ul>
+  <li>Use to set Properties of target element</li>
+  <li>Use to set direactive @Input() decorator</li>
+  <li>Return the proper type from "expression"</li>
+  <li>
+      You should omit the brackets when all of the following are true:
+    <ul>
+        <li>The target property accepts a string value.</li>
+        <li>The string is a fixed value that you can put directly into the template.</li>
+        <li>This initial value never changes.</li>
+    </ul>
+  </li>
+</ul> -->

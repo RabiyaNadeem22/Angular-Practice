@@ -1,0 +1,5 @@
+/* Check for styles that might hide or alter the <hr> element */
+hr {
+    border: 1px solid black;  /* Ensure this is visible */
+  }
+  
