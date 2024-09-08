@@ -1,4 +1,4 @@
- <h1>String interpolation - One way</h1>
+<!-- <h1>String interpolation - One way</h1>
 
 itemImageUrl: {{itemImageUrl}} <br>
 
@@ -8,12 +8,12 @@ testclass: {{testClasses}} <br>
 testclass: {{applyTestClass}} <br>
 testclass: {{applyRedStyle}} <br>
 
- <!-- getColor(): {{getColor()}} <br>  -->
- testObj without Pipe: {{testObj}}<br>
+getColor(): {{getColor()}} <br>  -->
+<!-- testObj without Pipe: {{testObj}}<br>
 
-testObj with Json Pipe {{testObj | json}} <br> 
+testObj with Json Pipe {{testObj | json}} <br> -->
 <!-- Safe Navigation Operator: {{testObj?.Name}} -->
-
+<!-- 
 <hr>
 <h1>Property Binding Example with []</h1>
 <a href="https://angular.io/guide/template-syntax#property-binding">For Docs</a>
@@ -24,7 +24,7 @@ testObj with Json Pipe {{testObj | json}} <br>
 
 <h3>Omitting square brackets make right side as "string"=> no evaulation</h3>
 <img src="itemImageUrl" width="400px" height="100px"> <br>
-<img src="{{itemImageUrl}}" width="400px" height="100px">
+<img src="{{itemImageUrl}}" width="400px" height="100px"> -->
 <!-- 
 <ul>
   <li>Use to set Properties of target element</li>
@@ -39,3 +39,22 @@ testObj with Json Pipe {{testObj | json}} <br>
     </ul>
   </li>
 </ul> -->
+
+<h1>Class Binding</h1>
+<p class="testclass">Normal class</p>
+<p [attr.class]="testClasses">Using attr.class</p>
+<p [class.test]="applyTestClass">Conditionaly add class</p>
+<p bind-class.test="applyTestClass">Conditionaly add class using bind- syntax</p>
+
+
+<!-- <hr>
+<h1>Style Binding</h1>
+<p [style.color]="'red'">conditional style.color </p>
+<p [style.background-color]="applyRedStyle ? 'red' : ''">conditional style.color with - sytnax </p>
+<p [style.backgroundColor]="applyRedStyle ? 'red' : ''">conditional style.color with cameCase </p>
+<p [style.backgroundColor]="getColor()">Get color by a function</p> -->
+
+<!-- <h1>Event Binding</h1> -->
+<!-- <button (click)="onSaveClick()">Save without passing Event detail</button> <br>
+<button (click)="onSaveClick($event)">Save with passing Event detail</button><br>
+Buttons Clicked: {{clickCounter}} -->
